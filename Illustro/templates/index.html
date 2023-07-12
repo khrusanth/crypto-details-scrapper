@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cryptocurrency Information</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* @import url("https://fonts.google.com/specimen/Orbitron"); */
+        *
+        {
+            padding: 0;
+            margin: 0;
+        }
+        body
+        {
+            background-image: url("abcd.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            float:right;
+            margin-right: 10%;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            font-size: 20px;
+            color: white;
+        }
+        .tablecontent
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container h1 
+        {
+            color: gold;
+            font-family: "Orbitron";
+            font-size: 35px;
+            text-align: center;
+            text-shadow:
+                0 0 2px #fff,
+                0 0 20px gold;
+        }
+        tr th
+        {
+            font-weight: bolder;
+            font-size: 25px;
+        }
+        img
+        {
+            size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="redirects">
+        <a href="www.etherium.com">
+            <i class="fa-brands fa-ethereum" style="color: black; font-size: 30px; border: 3px solid black; padding: 10px 15px; border-radius: 50%; background-color: white;"></i>
+        </a>
+        <a href="">
+            <i class="fa-brands fa-bitcoin" style="color: black; font-size: 35px; border: 3px solid black; padding: 5px; border-radius: 50%; background-color: white;"></i>
+        </a>
+    </div> -->
+    <div class="container">
+        <div class="content">
+            <h1>Cryptocurrency Information</h1>
+            <hr color="gold" style="margin: 10px;">
+            <div class="tablecontent">
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                    </tr>
+                    {% for name, marks in crypto_data %}
+                    <tr>
+                        <td>{{ name }}</td>
+                        <td>{{ marks }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>    
+            </div>
+        </div>
+    </div>
+</body>
+</html>
